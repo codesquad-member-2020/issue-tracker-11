@@ -79,11 +79,12 @@
 		C2DD4E4B248F9C3E0039BB74 /* IssueTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C2DD4E6E248FBB610039BB74 /* Views */,
+				C2DD4E70248FBB6E0039BB74 /* Controllers */,
 				C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */,
 				C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */,
-				C2DD4E50248F9C3E0039BB74 /* ViewController.swift */,
-				C2DD4E52248F9C3E0039BB74 /* Main.storyboard */,
 				C2DD4E55248F9C420039BB74 /* Assets.xcassets */,
+				C2DD4E52248F9C3E0039BB74 /* Main.storyboard */,
 				C2DD4E57248F9C420039BB74 /* LaunchScreen.storyboard */,
 				C2DD4E5A248F9C420039BB74 /* Info.plist */,
 			);
@@ -97,6 +98,21 @@
 				C2DD4E65248F9C420039BB74 /* Info.plist */,
 			);
 			path = IssueTrackerTests;
+			sourceTree = "<group>";
+		};
+		C2DD4E6E248FBB610039BB74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C2DD4E70248FBB6E0039BB74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2DD4E50248F9C3E0039BB74 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
