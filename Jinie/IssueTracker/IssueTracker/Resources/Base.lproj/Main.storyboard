@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-OQ-tt8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mark" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-OQ-tt8">
                                 <rect key="frame" x="165.5" y="344" width="83" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bia-OQ-tt8" secondAttribute="height" id="k9g-GI-bYV"/>
@@ -50,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="256" height="256"/>
+        <image name="Mark" width="32" height="32"/>
     </resources>
 </document>
