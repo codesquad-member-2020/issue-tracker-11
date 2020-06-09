@@ -77,12 +77,9 @@
 		781621BE248F90D4009B56DF /* IssueTracker */ = {
 			isa = PBXGroup;
 			children = (
-				781621BF248F90D4009B56DF /* AppDelegate.swift */,
-				781621C1248F90D4009B56DF /* SceneDelegate.swift */,
-				781621C5248F90D4009B56DF /* Main.storyboard */,
-				781621C8248F90D5009B56DF /* Assets.xcassets */,
-				781621CA248F90D5009B56DF /* LaunchScreen.storyboard */,
-				781621CD248F90D5009B56DF /* Info.plist */,
+				781621E1248F96DC009B56DF /* Sources */,
+				781621E3248F9700009B56DF /* Resources */,
+				781621E4248F970F009B56DF /* Supporting Files */,
 			);
 			path = IssueTracker;
 			sourceTree = "<group>";
@@ -94,6 +91,41 @@
 				781621D8248F90D5009B56DF /* Info.plist */,
 			);
 			path = IssueTrackerTests;
+			sourceTree = "<group>";
+		};
+		781621E1248F96DC009B56DF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				781621E2248F96EC009B56DF /* Entry */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		781621E2248F96EC009B56DF /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				781621BF248F90D4009B56DF /* AppDelegate.swift */,
+				781621C1248F90D4009B56DF /* SceneDelegate.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		781621E3248F9700009B56DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				781621C8248F90D5009B56DF /* Assets.xcassets */,
+				781621C5248F90D4009B56DF /* Main.storyboard */,
+				781621CA248F90D5009B56DF /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		781621E4248F970F009B56DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				781621CD248F90D5009B56DF /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
