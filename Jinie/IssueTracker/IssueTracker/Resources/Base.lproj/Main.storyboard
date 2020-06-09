@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbu-aR-2io">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="7Ty-hK-24P">
+            <objects>
+                <viewController id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gog-WT-LNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SGv-wp-IoC">
+                                <rect key="frame" x="20.5" y="363.5" width="373" height="179"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MarkImage" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-OQ-tt8">
+                                        <rect key="frame" x="145" y="0.0" width="83" height="83"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bia-OQ-tt8" secondAttribute="height" id="k9g-GI-bYV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K9-NT-xuN">
+                                        <rect key="frame" x="0.0" y="123" width="373" height="56"/>
+                                        <color key="backgroundColor" name="SignInButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="2n2-HL-mhe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" name="BackgroundColor"/>
+                                        <state key="normal" title="Sign in with GitHub"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8K9-NT-xuN" firstAttribute="width" secondItem="bXe-Gz-URn" secondAttribute="width" multiplier="0.9" id="ISh-yy-GBg"/>
+                            <constraint firstItem="SGv-wp-IoC" firstAttribute="centerX" secondItem="bXe-Gz-URn" secondAttribute="centerX" id="Jev-a9-Tob"/>
+                            <constraint firstItem="SGv-wp-IoC" firstAttribute="centerY" secondItem="bXe-Gz-URn" secondAttribute="centerY" id="Yyh-2p-Oo5"/>
+                            <constraint firstItem="Bia-OQ-tt8" firstAttribute="width" secondItem="gog-WT-LNV" secondAttribute="width" multiplier="0.2" id="l4n-G5-qDz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXe-Gz-URn"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6v-M0-0h3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MarkImage" width="60" height="60"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SignInButtonColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
