@@ -13,6 +13,7 @@
 		781621C9248F90D5009B56DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781621C8248F90D5009B56DF /* Assets.xcassets */; };
 		781621CC248F90D5009B56DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781621CA248F90D5009B56DF /* LaunchScreen.storyboard */; };
 		781621D7248F90D5009B56DF /* IssueTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621D6248F90D5009B56DF /* IssueTrackerTests.swift */; };
+		781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621E6248F97C5009B56DF /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		781621D2248F90D5009B56DF /* IssueTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781621D6248F90D5009B56DF /* IssueTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerTests.swift; sourceTree = "<group>"; };
 		781621D8248F90D5009B56DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781621E6248F97C5009B56DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,7 @@
 			children = (
 				781621E1248F96DC009B56DF /* Sources */,
 				781621E3248F9700009B56DF /* Resources */,
-				781621E4248F970F009B56DF /* Supporting Files */,
+				781621E4248F970F009B56DF /* SupportingFiles */,
 			);
 			path = IssueTracker;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				781621E2248F96EC009B56DF /* Entry */,
+				781621E5248F9784009B56DF /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -120,12 +123,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		781621E4248F970F009B56DF /* Supporting Files */ = {
+		781621E4248F970F009B56DF /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				781621CD248F90D5009B56DF /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		781621E5248F9784009B56DF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				781621E6248F97C5009B56DF /* SignInViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			files = (
 				781621C0248F90D4009B56DF /* AppDelegate.swift in Sources */,
 				781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */,
+				781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IssueTracker/Info.plist;
+				INFOPLIST_FILE = IssueTracker/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IssueTracker/Info.plist;
+				INFOPLIST_FILE = IssueTracker/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

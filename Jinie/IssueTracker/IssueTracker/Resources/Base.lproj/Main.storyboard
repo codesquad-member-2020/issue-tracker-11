@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbu-aR-2io">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="7Ty-hK-24P">
+            <objects>
+                <viewController id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gog-WT-LNV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-OQ-tt8">
+                                <rect key="frame" x="165.5" y="344" width="83" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bia-OQ-tt8" secondAttribute="height" id="k9g-GI-bYV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K9-NT-xuN">
+                                <rect key="frame" x="41.5" y="464" width="331" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2n2-HL-mhe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sign in with GitHub"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bia-OQ-tt8" firstAttribute="top" secondItem="bXe-Gz-URn" secondAttribute="top" constant="300" id="5hd-ly-lca"/>
+                            <constraint firstItem="Bia-OQ-tt8" firstAttribute="centerX" secondItem="bXe-Gz-URn" secondAttribute="centerX" id="HCb-Sq-dOD"/>
+                            <constraint firstItem="Bia-OQ-tt8" firstAttribute="width" secondItem="bXe-Gz-URn" secondAttribute="width" multiplier="0.2" id="Krc-Fw-jYX"/>
+                            <constraint firstItem="8K9-NT-xuN" firstAttribute="top" secondItem="bXe-Gz-URn" secondAttribute="top" constant="420" id="LAn-Xu-KYC"/>
+                            <constraint firstItem="8K9-NT-xuN" firstAttribute="width" secondItem="bXe-Gz-URn" secondAttribute="width" multiplier="0.8" id="WTO-HV-ZkH"/>
+                            <constraint firstItem="8K9-NT-xuN" firstAttribute="centerX" secondItem="bXe-Gz-URn" secondAttribute="centerX" id="t4f-BU-9MD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXe-Gz-URn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6v-M0-0h3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="256" height="256"/>
+    </resources>
 </document>
