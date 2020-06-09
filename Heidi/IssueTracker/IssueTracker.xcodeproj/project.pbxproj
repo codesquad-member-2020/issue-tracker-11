@@ -14,6 +14,7 @@
 		C2DD4E56248F9C420039BB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DD4E55248F9C420039BB74 /* Assets.xcassets */; };
 		C2DD4E59248F9C420039BB74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DD4E57248F9C420039BB74 /* LaunchScreen.storyboard */; };
 		C2DD4E64248F9C420039BB74 /* IssueTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E63248F9C420039BB74 /* IssueTrackerTests.swift */; };
+		C2DD4E72248FF3F60039BB74 /* CornerRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E71248FF3F60039BB74 /* CornerRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C2DD4E5F248F9C420039BB74 /* IssueTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E63248F9C420039BB74 /* IssueTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerTests.swift; sourceTree = "<group>"; };
 		C2DD4E65248F9C420039BB74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DD4E71248FF3F60039BB74 /* CornerRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		C2DD4E6E248FBB610039BB74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2DD4E71248FF3F60039BB74 /* CornerRoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				C2DD4E51248F9C3E0039BB74 /* ViewController.swift in Sources */,
 				C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */,
+				C2DD4E72248FF3F60039BB74 /* CornerRoundedButton.swift in Sources */,
 				C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
