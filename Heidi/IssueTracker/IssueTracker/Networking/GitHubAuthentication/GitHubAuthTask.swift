@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class GitHubAuthTask: NetworkTask {
+struct GitHubAuthTask: NetworkTask {
     typealias Input = GitHubAuthRequest
     typealias Output = String
     
@@ -19,8 +19,7 @@ final class GitHubAuthTask: NetworkTask {
     }
     
     func perform(_ request: Input, completion: @escaping (Result<Output, Error>) -> Void) {
-        authenticationDispatcher.execute(request: request) { [weak self] result in
-            guard let self = self else { return }
+        authenticationDispatcher.execute(request: request) { result in
             switch result {
             case let .success(url): completion(self.unpack(from: url, with: GitHubAuthKeys.payloadKey))
             case let .failure(error): completion(.failure(error))
