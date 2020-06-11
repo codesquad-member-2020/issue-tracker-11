@@ -14,6 +14,8 @@
 		C271E95324923C000016EF3F /* AuthenticationDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E95224923C000016EF3F /* AuthenticationDispatcher.swift */; };
 		C271E95524923CED0016EF3F /* GitHubAuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E95424923CED0016EF3F /* GitHubAuthSession.swift */; };
 		C271E957249240E40016EF3F /* GitHubAuthKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E956249240E40016EF3F /* GitHubAuthKeys.swift */; };
+		C271E95B24924BC30016EF3F /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E95A24924BC30016EF3F /* NetworkTask.swift */; };
+		C271E95D24924CE80016EF3F /* GitHubAuthTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E95C24924CE80016EF3F /* GitHubAuthTask.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		C271E95224923C000016EF3F /* AuthenticationDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDispatcher.swift; sourceTree = "<group>"; };
 		C271E95424923CED0016EF3F /* GitHubAuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthSession.swift; sourceTree = "<group>"; };
 		C271E956249240E40016EF3F /* GitHubAuthKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthKeys.swift; sourceTree = "<group>"; };
+		C271E95A24924BC30016EF3F /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		C271E95C24924CE80016EF3F /* GitHubAuthTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthTask.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				C271E947249221200016EF3F /* Endpoints.swift */,
 				C271E944249217800016EF3F /* Request.swift */,
 				C271E95224923C000016EF3F /* AuthenticationDispatcher.swift */,
+				C271E95A24924BC30016EF3F /* NetworkTask.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				C271E956249240E40016EF3F /* GitHubAuthKeys.swift */,
 				C271E950249228390016EF3F /* GitHubAuthRequest.swift */,
 				C271E95424923CED0016EF3F /* GitHubAuthSession.swift */,
+				C271E95C24924CE80016EF3F /* GitHubAuthTask.swift */,
 			);
 			path = GitHubAuthentication;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2DD4E51248F9C3E0039BB74 /* ViewController.swift in Sources */,
+				C271E95B24924BC30016EF3F /* NetworkTask.swift in Sources */,
 				C271E94C2492234E0016EF3F /* Secret.swift in Sources */,
 				C271E945249217800016EF3F /* Request.swift in Sources */,
 				C271E95324923C000016EF3F /* AuthenticationDispatcher.swift in Sources */,
@@ -275,6 +282,7 @@
 				C271E948249221200016EF3F /* Endpoints.swift in Sources */,
 				C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */,
 				C271E95524923CED0016EF3F /* GitHubAuthSession.swift in Sources */,
+				C271E95D24924CE80016EF3F /* GitHubAuthTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

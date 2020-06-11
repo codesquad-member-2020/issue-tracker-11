@@ -23,7 +23,7 @@ final class GitHubAuthSession: NSObject, AuthenticationDispatcher {
             if let url = callbackURL {
                 completion(.success(url.absoluteString))
             } else {
-                completion(.failure(AuthenticationError.notFound))
+                completion(.failure(AuthenticationError.urlNotFound))
             }
         }
         session.presentationContextProvider = self

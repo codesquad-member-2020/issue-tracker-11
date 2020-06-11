@@ -10,7 +10,8 @@ import Foundation
 
 enum AuthenticationError: Error {
     case invalidURL
-    case notFound
+    case urlNotFound
+    case tokenNotFound
 }
 
 protocol AuthenticationDispatcher {
