@@ -12,3 +12,7 @@ protocol ASWebAuthenticationSessionProtocol {
 
     init(url URL: URL, callbackURLScheme: String?, completionHandler: @escaping (URL?, Error?) -> Void)
 }
+
+extension ASWebAuthenticationSession: ASWebAuthenticationSessionProtocol {
+    
+}
