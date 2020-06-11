@@ -10,7 +10,7 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInWithGitHubButton: UIButton!
     
     private let cornerRadius: CGFloat = 5.0
 
@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
     }
     
     private func configureButton() {
-        signInButton.layer.cornerRadius = cornerRadius
-        signInButton.layer.masksToBounds = true
+        signInWithGitHubButton.layer.cornerRadius = cornerRadius
+        signInWithGitHubButton.layer.masksToBounds = true
     }
 }

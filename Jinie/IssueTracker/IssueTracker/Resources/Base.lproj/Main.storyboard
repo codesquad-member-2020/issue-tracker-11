@@ -11,7 +11,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="7Ty-hK-24P">
             <objects>
-                <viewController id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gog-WT-LNV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="bXe-Gz-URn"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
+                        <outlet property="signInWithGitHubButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6v-M0-0h3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -62,7 +62,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SignInButtonColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14117647058823529" green="0.16078431372549018" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
