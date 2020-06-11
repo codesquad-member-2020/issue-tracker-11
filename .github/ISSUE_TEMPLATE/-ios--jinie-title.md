@@ -1,8 +1,8 @@
 ---
 name: "iOS jinie 피쳐 개발 이슈 템플릿"
 about: iOS jinie 피쳐 개발 이슈 템플릿
-title: '[iOS] Title'
-labels: 'iOS'
+title: '[Jinie] Title'
+labels: 'Jinie'
 assignees: 'idevjinie'
 
 ---

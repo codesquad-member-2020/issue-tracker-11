@@ -1,8 +1,8 @@
 ---
 name: "iOS Heidi 피쳐 개발 이슈 템플릿"
 about: iOS Heidi 피쳐 개발 이슈 템플릿
-title: '[iOS] Title'
-labels: 'iOS'
+title: '[Heidi] Title'
+labels: 'Heidi'
 assignees: 'seizze'
 
 ---
