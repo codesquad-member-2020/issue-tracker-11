@@ -11,7 +11,7 @@ import XCTest
 
 final class FakeASWebAuthenticationSession: ASWebAuthenticationSessionProtocol {
     
-    let callbackURL = URL(string: "io.codesquad.issuetracker://example.com/auth?token=test")
+    let callbackURL = URL(string: "https://example.com/auth?token=test")
     
     @discardableResult
     init(url URL: URL, callbackURLScheme: String?, completionHandler: @escaping (URL?, Error?) -> Void) {
