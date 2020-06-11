@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		780365B12491FF25006B902F /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B02491FF25006B902F /* SignInTests.swift */; };
 		780365B5249200A6006B902F /* ASWebAuthenticationSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B4249200A6006B902F /* ASWebAuthenticationSessionProtocol.swift */; };
+		780365B724920387006B902F /* FakeASWebAuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */; };
 		781621C0248F90D4009B56DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621BF248F90D4009B56DF /* AppDelegate.swift */; };
 		781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621C1248F90D4009B56DF /* SceneDelegate.swift */; };
 		781621C7248F90D4009B56DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781621C5248F90D4009B56DF /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		780365B02491FF25006B902F /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
 		780365B4249200A6006B902F /* ASWebAuthenticationSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASWebAuthenticationSessionProtocol.swift; sourceTree = "<group>"; };
+		780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeASWebAuthenticationSession.swift; sourceTree = "<group>"; };
 		781621BC248F90D4009B56DF /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781621BF248F90D4009B56DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781621C1248F90D4009B56DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		780365B22492003A006B902F /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780365B724920387006B902F /* FakeASWebAuthenticationSession.swift in Sources */,
 				780365B12491FF25006B902F /* SignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
