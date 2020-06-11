@@ -37,9 +37,17 @@ class SignInViewController: UIViewController {
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             let token = queryItems?.filter({ $0.name == "token" }).first?.value
             UserDefaults.standard.set(token, forKey: "token")
+            self.presentTabBarController()
         })
         session?.presentationContextProvider = self
         session?.start()
+    }
+    
+    private func presentTabBarController() {
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        tabBarController.modalPresentationStyle = .fullScreen
+        tabBarController.modalTransitionStyle = .crossDissolve
+        present(tabBarController, animated: true, completion: nil)
     }
 }
 
