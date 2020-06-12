@@ -36,10 +36,11 @@ final class GitHubAuthTaskTests: XCTestCase {
     
     func test_GitHubAuth_Success() {
         let exp = expectation(description: "토큰 파싱 성공함")
-        let dispatcherStub = AuthenticationDispatcherSuccessStub()
+        let expectedToken = "jwtToken"
+        let dispatcherStub = AuthenticationDispatcherSuccessStub(with: expectedToken)
         GitHubAuthTask(dispatcher: dispatcherStub).perform(GitHubAuthRequest()) {
             if case let .success(token) = $0 {
-                XCTAssertEqual(token, "jwtjwt")
+                XCTAssertEqual(token, expectedToken)
                 exp.fulfill()
             }
         }
@@ -60,7 +61,13 @@ struct AuthenticationDispatcherNoTokenStub: AuthenticationDispatcher {
 }
 
 struct AuthenticationDispatcherSuccessStub: AuthenticationDispatcher {
+    private let token: String
+    
+    init(with token: String) {
+        self.token = token
+    }
+    
     func execute(request: Request, completion: @escaping (Result<String, Error>) -> Void) {
-        completion(.success("io.codesquad.issuetracker.app:/?token=jwtjwt"))
+        completion(.success("io.codesquad.issuetracker.app:/?token=\(token)"))
     }
 }
