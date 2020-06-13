@@ -12,8 +12,13 @@ import AuthenticationServices
 class SignInViewController: UIViewController {
     @IBOutlet weak var gitHubButton: UIButton!
     
-    private let cornerRadius: CGFloat = 5.0
+    enum OAuthURL {
+        static let requestURL = "http://52.78.203.80/api/login"
+        static let scheme = "io.codesquad.issuetracker.app"
+    }
+    
     private var session: ASWebAuthenticationSession?
+    private let cornerRadius: CGFloat = 5.0
     
     @IBAction func gitHubButtonTapped(_ sender: UIButton) {
         signInWithGitHub()
@@ -25,13 +30,8 @@ class SignInViewController: UIViewController {
         configureGitHubButton()
     }
     
-    private func configureGitHubButton() {
-        gitHubButton.layer.cornerRadius = cornerRadius
-        gitHubButton.layer.masksToBounds = true
-    }
-    
     private func signInWithGitHub() {
-        session = ASWebAuthenticationSession(url: URL(string: "http://52.78.203.80/api/login")!, callbackURLScheme: "io.codesquad.issuetracker.app", completionHandler: { (callbackURL, error) in
+        session = ASWebAuthenticationSession(url: URL(string: OAuthURL.requestURL)!, callbackURLScheme: OAuthURL.scheme, completionHandler: { (callbackURL, error) in
             let token = ASWebAuthenticationSession.token(url: callbackURL)
             UserDefaults.standard.set(token, forKey: "token")
             self.presentTabBarController()
@@ -45,6 +45,11 @@ class SignInViewController: UIViewController {
         tabBarController.modalPresentationStyle = .fullScreen
         tabBarController.modalTransitionStyle = .crossDissolve
         present(tabBarController, animated: true, completion: nil)
+    }
+    
+    private func configureGitHubButton() {
+        gitHubButton.layer.cornerRadius = cornerRadius
+        gitHubButton.layer.masksToBounds = true
     }
 }
 
