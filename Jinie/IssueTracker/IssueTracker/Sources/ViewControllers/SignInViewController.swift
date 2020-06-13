@@ -10,7 +10,6 @@ import UIKit
 import AuthenticationServices
 
 class SignInViewController: UIViewController {
-    
     @IBOutlet weak var gitHubButton: UIButton!
     
     private let cornerRadius: CGFloat = 5.0
@@ -33,9 +32,7 @@ class SignInViewController: UIViewController {
     
     private func signInWithGitHub() {
         session = ASWebAuthenticationSession(url: URL(string: "http://52.78.203.80/api/login")!, callbackURLScheme: "io.codesquad.issuetracker.app", completionHandler: { (callbackURL, error) in
-            guard let callbackURL = callbackURL, error == nil else { return }
-            let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
-            let token = queryItems?.filter({ $0.name == "token" }).first?.value
+            let token = ASWebAuthenticationSession.token(url: callbackURL)
             UserDefaults.standard.set(token, forKey: "token")
             self.presentTabBarController()
         })
@@ -52,7 +49,6 @@ class SignInViewController: UIViewController {
 }
 
 extension SignInViewController: ASWebAuthenticationPresentationContextProviding {
-    
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         return view.window!
     }
