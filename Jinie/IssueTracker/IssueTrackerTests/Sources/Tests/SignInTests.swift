@@ -7,11 +7,10 @@
 //
 
 import XCTest
-import AuthenticationServices
 @testable import IssueTracker
 
 class SignInTests: XCTestCase {
-    func testSetToken() {
+    func testTokenUponSuccessfulAuthentication() {
         FakeASWebAuthenticationSession(url: URL(string: "https://example.com/auth")!, callbackURLScheme: nil) { (callbackURL, error) in
             let token = FakeASWebAuthenticationSession.token(url: callbackURL)
             XCTAssertNotNil(token)

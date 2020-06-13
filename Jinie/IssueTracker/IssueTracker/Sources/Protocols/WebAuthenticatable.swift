@@ -1,5 +1,5 @@
 //
-//  ASWebAuthenticationSessionProtocol.swift
+//  WebAuthenticatable.swift
 //  IssueTracker
 //
 //  Created by jinie on 2020/06/11.
