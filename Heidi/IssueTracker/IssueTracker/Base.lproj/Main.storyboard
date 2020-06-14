@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Bf-nUg">
+                                <rect key="frame" x="16" y="343" width="382" height="220"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QTs-LT-NfK">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="QeO-sZ-AQu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-YY-im9">
+                                        <rect key="frame" x="0.0" y="160" width="382" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-8s-AcZ" customClass="CornerRoundedButton" customModule="IssueTracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="ZXf-gE-pI2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <state key="normal" title="Sign in with GitHub">
+                                                    <color key="titleColor" name="reversedLabel"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q6X-G4-ZH1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pfm-YY-im9" secondAttribute="trailing" id="0ka-AM-lgk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pfm-YY-im9" secondAttribute="bottom" id="IXA-et-xKn"/>
+                                    <constraint firstAttribute="trailing" secondItem="QTs-LT-NfK" secondAttribute="trailing" id="LFU-Fd-9J3"/>
+                                    <constraint firstItem="Pfm-YY-im9" firstAttribute="top" secondItem="QTs-LT-NfK" secondAttribute="bottom" constant="60" id="NXO-qG-RPy"/>
+                                    <constraint firstItem="QTs-LT-NfK" firstAttribute="leading" secondItem="hbZ-Bf-nUg" secondAttribute="leading" id="eMY-s0-H8N"/>
+                                    <constraint firstItem="Pfm-YY-im9" firstAttribute="leading" secondItem="hbZ-Bf-nUg" secondAttribute="leading" id="hob-dW-PQg"/>
+                                    <constraint firstItem="QTs-LT-NfK" firstAttribute="top" secondItem="hbZ-Bf-nUg" secondAttribute="top" id="quw-yd-6pc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hbZ-Bf-nUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EVs-zv-DnA"/>
+                            <constraint firstItem="hbZ-Bf-nUg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HtE-B4-UD3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hbZ-Bf-nUg" secondAttribute="trailing" constant="16" id="pTM-Wr-d99"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="githubLogo" width="60" height="60"/>
+        <namedColor name="reversedLabel">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
