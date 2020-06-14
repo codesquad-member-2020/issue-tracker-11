@@ -9,10 +9,11 @@
 import Foundation
 
 struct GitHubAuthUseCase {
-    func request(completion: @escaping (String) -> Void) {
+    func request(completion: @escaping (String) -> Void, failure: @escaping (Error) -> Void) {
         GitHubAuthTask(dispatcher: GitHubAuthSession()).perform(GitHubAuthRequest()) { result in
-            if case let .success(token) = result {
-                completion(token)
+            switch result {
+            case let .success(token): completion(token)
+            case let .failure(error): failure(error)
             }
         }
     }
