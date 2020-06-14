@@ -17,7 +17,11 @@
 
 ![oauth](ScreenShots/oauth.png)
 
+#### 개선한 내용
 
+* 테스트코드 가독성 개선 및 하드코딩 줄임
+* 네트워크 에러 alert 추가
+* 인증 실패할 경우 에러 핸들링을 위해 Failure handler 추가
 
 [pr12]: https://github.com/codesquad-member-2020/issue-tracker-11/pull/12
 
