@@ -11,7 +11,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="7Ty-hK-24P">
             <objects>
-                <viewController id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="zbu-aR-2io" customClass="SignInViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gog-WT-LNV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <color key="tintColor" name="BackgroundColor"/>
                                         <state key="normal" title="Sign in with GitHub"/>
+                                        <connections>
+                                            <action selector="gitHubButtonTapped:" destination="zbu-aR-2io" eventType="touchUpInside" id="KDp-zX-d9G"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -48,12 +51,62 @@
                         <viewLayoutGuide key="safeArea" id="bXe-Gz-URn"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
+                        <outlet property="gitHubButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6v-M0-0h3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62" y="11"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="cNH-md-x7i">
+            <objects>
+                <viewController id="mhH-1s-YyU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ia-Wy-ERe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ekl-nt-QbA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="FKU-WX-YtS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5N-xY-VGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="335"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="kSy-Un-Zav">
+            <objects>
+                <viewController id="dbA-T0-FBu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYZ-VZ-qdA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YxO-sg-bNb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="4uL-pl-Z94"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Po1-Vk-FBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="-313"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UdY-I4-MNd">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="dUB-f4-rHh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YLG-g0-XK0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dbA-T0-FBu" kind="relationship" relationship="viewControllers" id="M2H-7f-eZg"/>
+                        <segue destination="mhH-1s-YyU" kind="relationship" relationship="viewControllers" id="h6P-mW-3I3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3k8-vZ-E1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="11"/>
         </scene>
     </scenes>
     <resources>
@@ -62,7 +115,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SignInButtonColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14100000262260437" green="0.16099999845027924" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
