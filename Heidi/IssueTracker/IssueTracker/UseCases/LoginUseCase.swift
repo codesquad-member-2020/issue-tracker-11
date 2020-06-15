@@ -9,6 +9,10 @@
 import Foundation
 
 struct LoginUseCase {
+    func fetch() -> String? {
+        return LoginStorageTask(storage: DefaultStorage<String>()).fetch()
+    }
+    
     func store(token: String) {
         LoginStorageTask(storage: DefaultStorage<String>()).store(token)
     }

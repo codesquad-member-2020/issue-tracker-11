@@ -21,7 +21,7 @@ extension Identifiable {
 protocol Instantiable: Identifiable where Self: UIViewController { }
 
 extension Instantiable {
-    static func instantiate(from storyboard: StoryboardRouter) -> Self? {
+    static func instantiate(from storyboard: StoryboardRouter = .main) -> Self? {
         return storyboard.load(viewControllerType: self)
     }
 }
