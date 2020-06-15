@@ -1,5 +1,5 @@
 //
-//  Identifiable.swift
+//  Identifiable+Instantiable.swift
 //  IssueTracker
 //
 //  Created by Chaewan Park on 2020/06/15.
@@ -15,5 +15,13 @@ protocol Identifiable {
 extension Identifiable {
     static var identifier: String {
         return String(describing: self)
+    }
+}
+
+protocol Instantiable: Identifiable where Self: UIViewController { }
+
+extension Instantiable {
+    static func instantiate(from storyboard: StoryboardRouter) -> Self? {
+        return storyboard.load(viewControllerType: self)
     }
 }

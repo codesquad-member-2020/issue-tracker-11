@@ -21,3 +21,5 @@ final class SignInViewController: UIViewController {
         })
     }
 }
+
+extension SignInViewController: Instantiable { }

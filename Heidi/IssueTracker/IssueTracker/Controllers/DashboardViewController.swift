@@ -13,3 +13,5 @@ final class DashboardViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension DashboardViewController: Instantiable { }
