@@ -17,8 +17,6 @@ struct StorageKey<Content> {
 }
 
 protocol Storage {
-    associatedtype Content
-    
-    func read(for key: StorageKey<Content>) -> Content?
-    func write(_ newValue: Content, for key: StorageKey<Content>)
+    func read<Content>(for key: StorageKey<Content>) -> Content?
+    func write<Content>(_ newValue: Content, for key: StorageKey<Content>)
 }

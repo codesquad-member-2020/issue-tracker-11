@@ -15,11 +15,11 @@ struct DefaultStorage<Content>: Storage {
         self.storage = storage
     }
     
-    func read(for key: StorageKey<Content>) -> Content? {
+    func read<Content>(for key: StorageKey<Content>) -> Content? {
         return storage[key]
     }
     
-    func write(_ newValue: Content, for key: StorageKey<Content>) {
+    func write<Content>(_ newValue: Content, for key: StorageKey<Content>) {
         storage[key] = newValue
     }
 }
