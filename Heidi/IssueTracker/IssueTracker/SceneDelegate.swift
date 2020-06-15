@@ -21,4 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = SignInViewController.instantiate()
         }
     }
+    
+    func changeRootViewController(to viewController: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+        window.rootViewController = viewController
+    }
 }

@@ -16,9 +16,16 @@ final class SignInViewController: UIViewController {
     @IBAction func signIn(_ sender: UIButton) {
         GitHubAuthUseCase().request(completion: { token in
             LoginUseCase().store(token: token)
+            self.change(to: DashboardViewController.instantiate())
         }, failure: { _ in
             self.present(AlertController.networkError, animated: false)
         })
+    }
+    
+    private func change(to viewController: UIViewController?) {
+        guard let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+            let viewController = viewController else { return }
+        delegate.changeRootViewController(to: viewController)
     }
 }
 
