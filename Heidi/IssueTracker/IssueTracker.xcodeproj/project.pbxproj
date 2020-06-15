@@ -25,6 +25,7 @@
 		C271E9732497A8860016EF3F /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9722497A8860016EF3F /* LoginUseCase.swift */; };
 		C271E9752497AF3D0016EF3F /* StoryboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9742497AF3D0016EF3F /* StoryboardRouter.swift */; };
 		C271E9772497B0320016EF3F /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9762497B0320016EF3F /* Identifiable.swift */; };
+		C271E9792497B1FE0016EF3F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9782497B1FE0016EF3F /* DashboardViewController.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */; };
@@ -64,6 +65,7 @@
 		C271E9722497A8860016EF3F /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C271E9742497AF3D0016EF3F /* StoryboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRouter.swift; sourceTree = "<group>"; };
 		C271E9762497B0320016EF3F /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		C271E9782497B1FE0016EF3F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */,
+				C271E9782497B1FE0016EF3F /* DashboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C271E95F249260280016EF3F /* GitHubAuthUseCase.swift in Sources */,
+				C271E9792497B1FE0016EF3F /* DashboardViewController.swift in Sources */,
 				C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */,
 				C271E95B24924BC30016EF3F /* NetworkTask.swift in Sources */,
 				C271E94C2492234E0016EF3F /* Secret.swift in Sources */,
