@@ -20,6 +20,8 @@
 		C271E9632494B7110016EF3F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9622494B7110016EF3F /* AlertController.swift */; };
 		C271E96824968E410016EF3F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E96724968E410016EF3F /* Storage.swift */; };
 		C271E96A249770E30016EF3F /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E969249770E30016EF3F /* DefaultStorage.swift */; };
+		C271E96E2497A1DC0016EF3F /* LoginStorageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */; };
+		C271E9702497A2720016EF3F /* StorageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E96F2497A2720016EF3F /* StorageTask.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */; };
@@ -54,6 +56,8 @@
 		C271E9622494B7110016EF3F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		C271E96724968E410016EF3F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C271E969249770E30016EF3F /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
+		C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageTask.swift; sourceTree = "<group>"; };
+		C271E96F2497A2720016EF3F /* StorageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTask.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			children = (
 				C271E96724968E410016EF3F /* Storage.swift */,
 				C271E969249770E30016EF3F /* DefaultStorage.swift */,
+				C271E96F2497A2720016EF3F /* StorageTask.swift */,
+				C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */,
 				C271E95B24924BC30016EF3F /* NetworkTask.swift in Sources */,
 				C271E94C2492234E0016EF3F /* Secret.swift in Sources */,
+				C271E9702497A2720016EF3F /* StorageTask.swift in Sources */,
 				C271E945249217800016EF3F /* Request.swift in Sources */,
 				C271E95324923C000016EF3F /* AuthenticationDispatcher.swift in Sources */,
 				C271E951249228390016EF3F /* GitHubAuthRequest.swift in Sources */,
@@ -309,6 +316,7 @@
 				C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */,
 				C2DD4E72248FF3F60039BB74 /* CornerRoundedButton.swift in Sources */,
 				C271E957249240E40016EF3F /* GitHubAuthKeys.swift in Sources */,
+				C271E96E2497A1DC0016EF3F /* LoginStorageTask.swift in Sources */,
 				C271E948249221200016EF3F /* Endpoints.swift in Sources */,
 				C271E9632494B7110016EF3F /* AlertController.swift in Sources */,
 				C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */,
