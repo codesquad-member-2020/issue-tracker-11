@@ -22,6 +22,7 @@
 		C271E96A249770E30016EF3F /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E969249770E30016EF3F /* DefaultStorage.swift */; };
 		C271E96E2497A1DC0016EF3F /* LoginStorageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */; };
 		C271E9702497A2720016EF3F /* StorageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E96F2497A2720016EF3F /* StorageTask.swift */; };
+		C271E9732497A8860016EF3F /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9722497A8860016EF3F /* LoginUseCase.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */; };
@@ -58,6 +59,7 @@
 		C271E969249770E30016EF3F /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
 		C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageTask.swift; sourceTree = "<group>"; };
 		C271E96F2497A2720016EF3F /* StorageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTask.swift; sourceTree = "<group>"; };
+		C271E9722497A8860016EF3F /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				C271E950249228390016EF3F /* GitHubAuthRequest.swift */,
 				C271E95424923CED0016EF3F /* GitHubAuthSession.swift */,
 				C271E95C24924CE80016EF3F /* GitHubAuthTask.swift */,
-				C271E95E249260280016EF3F /* GitHubAuthUseCase.swift */,
 			);
 			path = GitHubAuthentication;
 			sourceTree = "<group>";
@@ -140,6 +141,15 @@
 				C271E96D2497A1DC0016EF3F /* LoginStorageTask.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		C271E9712497A8670016EF3F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C271E95E249260280016EF3F /* GitHubAuthUseCase.swift */,
+				C271E9722497A8860016EF3F /* LoginUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		C2DD4E40248F9C3E0039BB74 = {
@@ -166,6 +176,7 @@
 				C271E965249641AB0016EF3F /* Utils */,
 				C2DD4E6E248FBB610039BB74 /* Views */,
 				C2DD4E70248FBB6E0039BB74 /* Controllers */,
+				C271E9712497A8670016EF3F /* UseCases */,
 				C271E941249216680016EF3F /* Networking */,
 				C271E9662496872B0016EF3F /* Storage */,
 				C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */,
@@ -323,6 +334,7 @@
 				C271E96824968E410016EF3F /* Storage.swift in Sources */,
 				C271E95524923CED0016EF3F /* GitHubAuthSession.swift in Sources */,
 				C271E95D24924CE80016EF3F /* GitHubAuthTask.swift in Sources */,
+				C271E9732497A8860016EF3F /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

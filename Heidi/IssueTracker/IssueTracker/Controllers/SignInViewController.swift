@@ -15,7 +15,7 @@ final class SignInViewController: UIViewController {
     
     @IBAction func signIn(_ sender: UIButton) {
         GitHubAuthUseCase().request(completion: { token in
-            // token received
+            LoginUseCase().store(token: token)
         }, failure: { _ in
             self.present(AlertController.networkError, animated: false)
         })
