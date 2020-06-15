@@ -26,6 +26,7 @@
 		C271E9752497AF3D0016EF3F /* StoryboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9742497AF3D0016EF3F /* StoryboardRouter.swift */; };
 		C271E9772497B0320016EF3F /* Identifiable+Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9762497B0320016EF3F /* Identifiable+Instantiable.swift */; };
 		C271E9792497B1FE0016EF3F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9782497B1FE0016EF3F /* DashboardViewController.swift */; };
+		C271E97B2497D9400016EF3F /* LoginStorageTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E97A2497D9400016EF3F /* LoginStorageTaskTests.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */; };
@@ -66,6 +67,7 @@
 		C271E9742497AF3D0016EF3F /* StoryboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRouter.swift; sourceTree = "<group>"; };
 		C271E9762497B0320016EF3F /* Identifiable+Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Identifiable+Instantiable.swift"; sourceTree = "<group>"; };
 		C271E9782497B1FE0016EF3F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		C271E97A2497D9400016EF3F /* LoginStorageTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageTaskTests.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C2DD4E63248F9C420039BB74 /* GitHubAuthTaskTests.swift */,
+				C271E97A2497D9400016EF3F /* LoginStorageTaskTests.swift */,
 				C2DD4E65248F9C420039BB74 /* Info.plist */,
 			);
 			path = IssueTrackerTests;
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C271E97B2497D9400016EF3F /* LoginStorageTaskTests.swift in Sources */,
 				C2DD4E64248F9C420039BB74 /* GitHubAuthTaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
