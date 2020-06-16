@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780365B12491FF25006B902F /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B02491FF25006B902F /* SignInTests.swift */; };
-		780365B5249200A6006B902F /* WebAuthenticatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B4249200A6006B902F /* WebAuthenticatable.swift */; };
-		780365B724920387006B902F /* FakeASWebAuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */; };
 		781621C0248F90D4009B56DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621BF248F90D4009B56DF /* AppDelegate.swift */; };
 		781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621C1248F90D4009B56DF /* SceneDelegate.swift */; };
 		781621C7248F90D4009B56DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781621C5248F90D4009B56DF /* Main.storyboard */; };
 		781621C9248F90D5009B56DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781621C8248F90D5009B56DF /* Assets.xcassets */; };
 		781621CC248F90D5009B56DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781621CA248F90D5009B56DF /* LaunchScreen.storyboard */; };
 		781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621E6248F97C5009B56DF /* SignInViewController.swift */; };
+		78B1B2B72498B3FC004EF089 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2B62498B3FC004EF089 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		780365B02491FF25006B902F /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
-		780365B4249200A6006B902F /* WebAuthenticatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuthenticatable.swift; sourceTree = "<group>"; };
-		780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeASWebAuthenticationSession.swift; sourceTree = "<group>"; };
 		781621BC248F90D4009B56DF /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781621BF248F90D4009B56DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781621C1248F90D4009B56DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +37,7 @@
 		781621D2248F90D5009B56DF /* IssueTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781621D8248F90D5009B56DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781621E6248F97C5009B56DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		78B1B2B62498B3FC004EF089 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +78,6 @@
 		780365A6249141D4006B902F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				780365B02491FF25006B902F /* SignInTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -90,17 +85,8 @@
 		780365B22492003A006B902F /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				780365B624920387006B902F /* FakeASWebAuthenticationSession.swift */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		780365B32492006A006B902F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				780365B4249200A6006B902F /* WebAuthenticatable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		781621B3248F90D4009B56DF = {
@@ -144,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				781621E2248F96EC009B56DF /* Entry */,
-				780365B32492006A006B902F /* Protocols */,
+				78B1B2B52498B3E9004EF089 /* Network */,
 				781621E5248F9784009B56DF /* ViewControllers */,
 			);
 			path = Sources;
@@ -183,6 +169,14 @@
 				781621E6248F97C5009B56DF /* SignInViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		78B1B2B52498B3E9004EF089 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				78B1B2B62498B3FC004EF089 /* Request.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				781621C0248F90D4009B56DF /* AppDelegate.swift in Sources */,
+				78B1B2B72498B3FC004EF089 /* Request.swift in Sources */,
 				781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */,
 				781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */,
-				780365B5249200A6006B902F /* WebAuthenticatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780365B724920387006B902F /* FakeASWebAuthenticationSession.swift in Sources */,
-				780365B12491FF25006B902F /* SignInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

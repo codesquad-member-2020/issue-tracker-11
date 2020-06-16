@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
     private let cornerRadius: CGFloat = 5.0
     
     @IBAction func gitHubButtonTapped(_ sender: UIButton) {
-        signInWithGitHub()
+        showTabBarController()
     }
 
     override func viewDidLoad() {
@@ -30,17 +30,7 @@ class SignInViewController: UIViewController {
         configureGitHubButton()
     }
     
-    private func signInWithGitHub() {
-        session = ASWebAuthenticationSession(url: URL(string: OAuthURL.requestURL)!, callbackURLScheme: OAuthURL.scheme, completionHandler: { (callbackURL, error) in
-            let token = ASWebAuthenticationSession.token(url: callbackURL)
-            UserDefaults.standard.set(token, forKey: "token")
-            self.presentTabBarController()
-        })
-        session?.presentationContextProvider = self
-        session?.start()
-    }
-    
-    private func presentTabBarController() {
+    private func showTabBarController() {
         let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         tabBarController.modalPresentationStyle = .fullScreen
         tabBarController.modalTransitionStyle = .crossDissolve
