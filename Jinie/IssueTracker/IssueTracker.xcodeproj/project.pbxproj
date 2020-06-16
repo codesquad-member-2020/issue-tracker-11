@@ -15,6 +15,7 @@
 		781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621E6248F97C5009B56DF /* SignInViewController.swift */; };
 		78B1B2B72498B3FC004EF089 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2B62498B3FC004EF089 /* Request.swift */; };
 		78B1B2B92498B84E004EF089 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */; };
+		78B1B2BB2498BB37004EF089 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2BA2498BB36004EF089 /* NetworkTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		781621E6248F97C5009B56DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		78B1B2B62498B3FC004EF089 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		78B1B2BA2498BB36004EF089 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				78B1B2B62498B3FC004EF089 /* Request.swift */,
 				78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */,
+				78B1B2BA2498BB36004EF089 /* NetworkTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				781621C0248F90D4009B56DF /* AppDelegate.swift in Sources */,
+				78B1B2BB2498BB37004EF089 /* NetworkTask.swift in Sources */,
 				78B1B2B72498B3FC004EF089 /* Request.swift in Sources */,
 				781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */,
 				78B1B2B92498B84E004EF089 /* NetworkDispatcher.swift in Sources */,

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkDispatcher {
-    func execute(request: Request, _ completionHandler: @escaping (Result<Codable, Error>) -> Void)
+    func execute(request: Request, _ completionHandler: @escaping (Result<Data, Error>) -> Void)
 }
