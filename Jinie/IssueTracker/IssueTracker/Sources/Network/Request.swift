@@ -17,14 +17,14 @@ enum HTTPMethod: String {
 }
 
 protocol Request {
-    var path: String { get }
+    var url: URL { get }
     var method: HTTPMethod { get }
-    var params: [String : Any]? { get }
+    var parameters: [String : Any]? { get }
     var headers: [String : String]? { get }
 }
 
 extension Request {
     var method: HTTPMethod { return .get }
-    var params: [String : Any]? { return nil }
+    var parameters: [String : Any]? { return nil }
     var headers: [String : String]? { return nil }
 }
