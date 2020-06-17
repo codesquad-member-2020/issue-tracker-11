@@ -10,4 +10,5 @@ import Foundation
 
 enum API {
     static let baseURL = URL(string: "http://52.78.203.80/api")!
+    static let scheme = "io.codesquad.issuetracker.app"
 }
