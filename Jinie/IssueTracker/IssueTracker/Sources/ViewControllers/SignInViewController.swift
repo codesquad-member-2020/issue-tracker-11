@@ -12,16 +12,10 @@ import AuthenticationServices
 class SignInViewController: UIViewController {
     @IBOutlet weak var gitHubButton: UIButton!
     
-    enum OAuthURL {
-        static let requestURL = "http://52.78.203.80/api/login"
-        static let scheme = "io.codesquad.issuetracker.app"
-    }
-    
-    private var session: ASWebAuthenticationSession?
     private let cornerRadius: CGFloat = 5.0
     
     @IBAction func gitHubButtonTapped(_ sender: UIButton) {
-        showTabBarController()
+        presentTabBarController()
     }
 
     override func viewDidLoad() {
@@ -30,7 +24,7 @@ class SignInViewController: UIViewController {
         configureGitHubButton()
     }
     
-    private func showTabBarController() {
+    private func presentTabBarController() {
         let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         tabBarController.modalPresentationStyle = .fullScreen
         tabBarController.modalTransitionStyle = .crossDissolve

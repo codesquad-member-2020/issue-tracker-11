@@ -23,7 +23,7 @@ final class GitHubAuthTask: AuthenticationTask {
         }
     }
     
-    func token(of url: String) -> String {
+    private func token(of url: String) -> String {
         let queryItems = URLComponents(string: url)?.queryItems
         return queryItems?.filter({ $0.name == "token" }).first?.value ?? ""
     }
