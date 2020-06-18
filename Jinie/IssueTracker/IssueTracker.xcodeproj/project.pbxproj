@@ -48,6 +48,7 @@
 		781621D8248F90D5009B56DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781621E6248F97C5009B56DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		788D8E2E249A4D08001C4AE9 /* GitHubAuthDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthDispatcher.swift; sourceTree = "<group>"; };
+		788D8E30249B9B3A001C4AE9 /* IssueTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IssueTracker.entitlements; sourceTree = "<group>"; };
 		78B1B2B62498B3FC004EF089 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		78B1B2BA2498BB36004EF089 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		781621BE248F90D4009B56DF /* IssueTracker */ = {
 			isa = PBXGroup;
 			children = (
+				788D8E30249B9B3A001C4AE9 /* IssueTracker.entitlements */,
 				781621E1248F96DC009B56DF /* Sources */,
 				781621E3248F9700009B56DF /* Resources */,
 				781621E4248F970F009B56DF /* SupportingFiles */,
@@ -491,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IssueTracker/IssueTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				INFOPLIST_FILE = IssueTracker/SupportingFiles/Info.plist;
@@ -510,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IssueTracker/IssueTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				INFOPLIST_FILE = IssueTracker/SupportingFiles/Info.plist;
