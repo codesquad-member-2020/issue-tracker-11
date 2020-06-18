@@ -10,18 +10,32 @@ import UIKit
 import AuthenticationServices
 
 class SignInViewController: UIViewController {
-    @IBOutlet weak var gitHubButton: UIButton!
+    @IBOutlet weak var gitHubAuthButton: UIButton!
+    @IBOutlet weak var appleAuthButtonView: UIView!
     
-    private let cornerRadius: CGFloat = 5.0
+    private var appleAuthButton: ASAuthorizationAppleIDButton!
     
-    @IBAction func gitHubButtonTapped(_ sender: UIButton) {
-        presentTabBarController()
+    @IBAction func gitHubAuthButtonTapped(_ sender: UIButton) {
+        signInWithGitHub()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureGitHubButton()
+        configureGitHubAuthButton()
+        configureAppleAuthButton()
+    }
+    
+    private func signInWithGitHub() {
+        let dispatcher = GitHubAuthDispatcher()
+        let task = GitHubAuthTask(dispatcher: dispatcher)
+        
+        task.perform(request: GitHubAuthRequest()) { result in
+            if case .success(let token) = result {
+                UserDefaults.standard.set(token, forKey: "token")
+                self.presentTabBarController()
+            }
+        }
     }
     
     private func presentTabBarController() {
@@ -31,14 +45,20 @@ class SignInViewController: UIViewController {
         present(tabBarController, animated: true, completion: nil)
     }
     
-    private func configureGitHubButton() {
-        gitHubButton.layer.cornerRadius = cornerRadius
-        gitHubButton.layer.masksToBounds = true
+    private func configureGitHubAuthButton() {
+        gitHubAuthButton.layer.cornerRadius = 6.0
+        gitHubAuthButton.layer.masksToBounds = true
     }
-}
-
-extension SignInViewController: ASWebAuthenticationPresentationContextProviding {
-    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return view.window!
+    
+    private func configureAppleAuthButton() {
+        if traitCollection.userInterfaceStyle == .dark {
+            appleAuthButton = ASAuthorizationAppleIDButton(authorizationButtonType: .default, authorizationButtonStyle: .white)
+        } else {
+            appleAuthButton = ASAuthorizationAppleIDButton(authorizationButtonType: .default, authorizationButtonStyle: .black)
+        }
+        
+        appleAuthButton.center = appleAuthButtonView.center
+        appleAuthButton.frame = appleAuthButtonView.bounds
+        appleAuthButtonView.addSubview(appleAuthButton)
     }
 }
