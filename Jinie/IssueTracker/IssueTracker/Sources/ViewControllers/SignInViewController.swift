@@ -14,7 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var appleAuthButtonView: UIView!
     
     private var appleAuthButton: ASAuthorizationAppleIDButton!
-    private var cornerRadius: CGFloat = 5.0
+    private let cornerRadius: CGFloat = 5.0
     
     @IBAction func gitHubAuthButtonTapped(_ sender: UIButton) {
         signInWithGitHub()
@@ -52,7 +52,7 @@ class SignInViewController: UIViewController {
         
         gitHubAuthTask.perform(request: GitHubAuthRequest()) { result in
             if case .success(let token) = result {
-                UserDefaults.standard.set(token, forKey: "token")
+                UserDefaults.standard.set(token, forKey: UserPreferences.tokenKey)
                 self.presentTabBarController()
             }
         }
@@ -63,6 +63,7 @@ class SignInViewController: UIViewController {
         request.requestedScopes = [.fullName, .email]
         
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
@@ -72,6 +73,24 @@ class SignInViewController: UIViewController {
         tabBarController.modalPresentationStyle = .fullScreen
         tabBarController.modalTransitionStyle = .crossDissolve
         present(tabBarController, animated: true, completion: nil)
+    }
+}
+
+extension SignInViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
+        guard let identityToken = credential.identityToken else { return }
+        guard let token = String(data: identityToken, encoding: .utf8) else { return }
+        UserDefaults.standard.set(token, forKey: UserPreferences.tokenKey)
+        presentTabBarController()
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        let alertController = UIAlertController(title: "Authorization failed",
+                                                message: "\(error.localizedDescription)",
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

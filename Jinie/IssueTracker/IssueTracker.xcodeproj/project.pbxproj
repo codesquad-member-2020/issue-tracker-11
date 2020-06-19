@@ -14,6 +14,7 @@
 		781621CC248F90D5009B56DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781621CA248F90D5009B56DF /* LaunchScreen.storyboard */; };
 		781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781621E6248F97C5009B56DF /* SignInViewController.swift */; };
 		788D8E2F249A4D08001C4AE9 /* GitHubAuthDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D8E2E249A4D08001C4AE9 /* GitHubAuthDispatcher.swift */; };
+		788D8E32249C5B47001C4AE9 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D8E31249C5B47001C4AE9 /* UserPreferences.swift */; };
 		78B1B2B72498B3FC004EF089 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2B62498B3FC004EF089 /* Request.swift */; };
 		78B1B2B92498B84E004EF089 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */; };
 		78B1B2BB2498BB37004EF089 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1B2BA2498BB36004EF089 /* NetworkTask.swift */; };
@@ -49,6 +50,7 @@
 		781621E6248F97C5009B56DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		788D8E2E249A4D08001C4AE9 /* GitHubAuthDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthDispatcher.swift; sourceTree = "<group>"; };
 		788D8E30249B9B3A001C4AE9 /* IssueTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IssueTracker.entitlements; sourceTree = "<group>"; };
+		788D8E31249C5B47001C4AE9 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		78B1B2B62498B3FC004EF089 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		78B1B2BA2498BB36004EF089 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				78B1B2C22499F49B004EF089 /* OAuth */,
+				788D8E31249C5B47001C4AE9 /* UserPreferences.swift */,
 				78B1B2BC2498CA72004EF089 /* API.swift */,
 				78B1B2B62498B3FC004EF089 /* Request.swift */,
 				78B1B2B82498B84E004EF089 /* NetworkDispatcher.swift */,
@@ -330,6 +333,7 @@
 				78B1B2D0249A46FA004EF089 /* AuthenticationDispatcher.swift in Sources */,
 				78B1B2B72498B3FC004EF089 /* Request.swift in Sources */,
 				781621C2248F90D4009B56DF /* SceneDelegate.swift in Sources */,
+				788D8E32249C5B47001C4AE9 /* UserPreferences.swift in Sources */,
 				78B1B2B92498B84E004EF089 /* NetworkDispatcher.swift in Sources */,
 				781621E7248F97C5009B56DF /* SignInViewController.swift in Sources */,
 				78B1B2BD2498CA72004EF089 /* API.swift in Sources */,
