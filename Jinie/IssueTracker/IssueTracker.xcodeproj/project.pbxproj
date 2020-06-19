@@ -197,10 +197,20 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		78907843249C87E6006E477D /* GitHubAuth */ = {
+			isa = PBXGroup;
+			children = (
+				78B1B2C92499F861004EF089 /* GitHubAuthRequest.swift */,
+				788D8E2E249A4D08001C4AE9 /* GitHubAuthDispatcher.swift */,
+				78B1B2C52499F623004EF089 /* GitHubAuthTask.swift */,
+			);
+			path = GitHubAuth;
+			sourceTree = "<group>";
+		};
 		78B1B2B52498B3E9004EF089 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				78B1B2C22499F49B004EF089 /* OAuth */,
+				78B1B2C22499F49B004EF089 /* Auth */,
 				788D8E31249C5B47001C4AE9 /* UserPreferences.swift */,
 				78B1B2BC2498CA72004EF089 /* API.swift */,
 				78B1B2B62498B3FC004EF089 /* Request.swift */,
@@ -210,16 +220,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		78B1B2C22499F49B004EF089 /* OAuth */ = {
+		78B1B2C22499F49B004EF089 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				78B1B2CF249A46FA004EF089 /* AuthenticationDispatcher.swift */,
 				78B1B2CD249A46C9004EF089 /* AuthenticationTask.swift */,
-				78B1B2C92499F861004EF089 /* GitHubAuthRequest.swift */,
-				788D8E2E249A4D08001C4AE9 /* GitHubAuthDispatcher.swift */,
-				78B1B2C52499F623004EF089 /* GitHubAuthTask.swift */,
+				78907843249C87E6006E477D /* GitHubAuth */,
 			);
-			path = OAuth;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -81,6 +81,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
         guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
         guard let identityToken = credential.identityToken else { return }
         guard let token = String(data: identityToken, encoding: .utf8) else { return }
+        
         UserDefaults.standard.set(token, forKey: UserPreferences.tokenKey)
         presentTabBarController()
     }

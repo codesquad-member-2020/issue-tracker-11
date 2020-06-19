@@ -17,6 +17,6 @@ final class GitHubAuthDispatcherStub: AuthenticationDispatcher {
     }
     
     func execute(request: Request, _ completionHandler: @escaping (Result<URL, Error>) -> Void) {
-        completionHandler(.success(URL(string: "io.codesquad.issuetracker.app:/?token=\(token)")!))
+        completionHandler(.success(URL(string: "io.codesquad.issuetracker.app:/?\(UserPreferences.tokenKey)=\(token)")!))
     }
 }
