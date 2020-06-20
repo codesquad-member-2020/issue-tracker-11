@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SGv-wp-IoC">
-                                <rect key="frame" x="20.5" y="363.5" width="373" height="179"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SGv-wp-IoC">
+                                <rect key="frame" x="20.5" y="325.5" width="373" height="255"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MarkImage" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-OQ-tt8">
                                         <rect key="frame" x="145" y="0.0" width="83" height="83"/>
@@ -25,24 +25,34 @@
                                             <constraint firstAttribute="width" secondItem="Bia-OQ-tt8" secondAttribute="height" id="k9g-GI-bYV"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K9-NT-xuN">
-                                        <rect key="frame" x="0.0" y="123" width="373" height="56"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K9-NT-xuN">
+                                        <rect key="frame" x="0.0" y="113" width="373" height="56"/>
                                         <color key="backgroundColor" name="SignInButtonColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="2n2-HL-mhe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="tintColor" name="BackgroundColor"/>
-                                        <state key="normal" title="Sign in with GitHub"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <color key="tintColor" name="SignInButtonTextColor"/>
+                                        <state key="normal" title="Sign in with GitHub">
+                                            <color key="titleColor" name="SignInButtonTextColor"/>
+                                        </state>
                                         <connections>
-                                            <action selector="gitHubButtonTapped:" destination="zbu-aR-2io" eventType="touchUpInside" id="KDp-zX-d9G"/>
+                                            <action selector="gitHubAuthButtonTapped:" destination="zbu-aR-2io" eventType="touchUpInside" id="KDp-zX-d9G"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sA-8g-MK6">
+                                        <rect key="frame" x="0.0" y="199" width="373" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="7ip-4H-l0r"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0sA-8g-MK6" firstAttribute="width" secondItem="bXe-Gz-URn" secondAttribute="width" multiplier="0.9" id="Brn-xc-R0M"/>
                             <constraint firstItem="8K9-NT-xuN" firstAttribute="width" secondItem="bXe-Gz-URn" secondAttribute="width" multiplier="0.9" id="ISh-yy-GBg"/>
                             <constraint firstItem="SGv-wp-IoC" firstAttribute="centerX" secondItem="bXe-Gz-URn" secondAttribute="centerX" id="Jev-a9-Tob"/>
                             <constraint firstItem="SGv-wp-IoC" firstAttribute="centerY" secondItem="bXe-Gz-URn" secondAttribute="centerY" id="Yyh-2p-Oo5"/>
@@ -51,7 +61,8 @@
                         <viewLayoutGuide key="safeArea" id="bXe-Gz-URn"/>
                     </view>
                     <connections>
-                        <outlet property="gitHubButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
+                        <outlet property="appleAuthButtonView" destination="0sA-8g-MK6" id="Etw-6a-khJ"/>
+                        <outlet property="gitHubAuthButton" destination="8K9-NT-xuN" id="B7L-Pc-f0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6v-M0-0h3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,7 +126,10 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SignInButtonColor">
-            <color red="0.14100000262260437" green="0.16099999845027924" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SignInButtonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

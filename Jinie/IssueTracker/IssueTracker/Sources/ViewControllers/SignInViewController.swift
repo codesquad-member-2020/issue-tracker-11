@@ -10,34 +10,62 @@ import UIKit
 import AuthenticationServices
 
 class SignInViewController: UIViewController {
-    @IBOutlet weak var gitHubButton: UIButton!
+    @IBOutlet weak var gitHubAuthButton: UIButton!
+    @IBOutlet weak var appleAuthButtonView: UIView!
     
-    enum OAuthURL {
-        static let requestURL = "http://52.78.203.80/api/login"
-        static let scheme = "io.codesquad.issuetracker.app"
-    }
-    
-    private var session: ASWebAuthenticationSession?
+    private var appleAuthButton: ASAuthorizationAppleIDButton!
     private let cornerRadius: CGFloat = 5.0
     
-    @IBAction func gitHubButtonTapped(_ sender: UIButton) {
+    @IBAction func gitHubAuthButtonTapped(_ sender: UIButton) {
         signInWithGitHub()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureGitHubButton()
+        configureGitHubAuthButton()
+        configureAppleAuthButton()
+    }
+    
+    private func configureGitHubAuthButton() {
+        gitHubAuthButton.layer.cornerRadius = cornerRadius
+        gitHubAuthButton.layer.masksToBounds = true
+    }
+    
+    private func configureAppleAuthButton() {
+        if traitCollection.userInterfaceStyle == .dark {
+            appleAuthButton = ASAuthorizationAppleIDButton(authorizationButtonType: .default, authorizationButtonStyle: .white)
+        } else {
+            appleAuthButton = ASAuthorizationAppleIDButton(authorizationButtonType: .default, authorizationButtonStyle: .black)
+        }
+        
+        appleAuthButton.addTarget(self, action: #selector(signInWithApple), for: .touchUpInside)
+        appleAuthButton.center = appleAuthButtonView.center
+        appleAuthButton.frame = appleAuthButtonView.bounds
+        appleAuthButton.cornerRadius = cornerRadius
+        appleAuthButtonView.addSubview(appleAuthButton)
     }
     
     private func signInWithGitHub() {
-        session = ASWebAuthenticationSession(url: URL(string: OAuthURL.requestURL)!, callbackURLScheme: OAuthURL.scheme, completionHandler: { (callbackURL, error) in
-            let token = ASWebAuthenticationSession.token(url: callbackURL)
-            UserDefaults.standard.set(token, forKey: "token")
-            self.presentTabBarController()
-        })
-        session?.presentationContextProvider = self
-        session?.start()
+        let gitHubAuthDispatcher = GitHubAuthDispatcher()
+        let gitHubAuthTask = GitHubAuthTask(dispatcher: gitHubAuthDispatcher)
+        
+        gitHubAuthTask.perform(request: GitHubAuthRequest()) { result in
+            if case .success(let token) = result {
+                UserDefaults.standard.set(token, forKey: UserPreferences.tokenKey)
+                self.presentTabBarController()
+            }
+        }
+    }
+    
+    @objc func signInWithApple() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
     }
     
     private func presentTabBarController() {
@@ -46,15 +74,29 @@ class SignInViewController: UIViewController {
         tabBarController.modalTransitionStyle = .crossDissolve
         present(tabBarController, animated: true, completion: nil)
     }
+}
+
+extension SignInViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
+        guard let identityToken = credential.identityToken else { return }
+        guard let token = String(data: identityToken, encoding: .utf8) else { return }
+        
+        UserDefaults.standard.set(token, forKey: UserPreferences.tokenKey)
+        presentTabBarController()
+    }
     
-    private func configureGitHubButton() {
-        gitHubButton.layer.cornerRadius = cornerRadius
-        gitHubButton.layer.masksToBounds = true
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        let alertController = UIAlertController(title: "Authorization failed",
+                                                message: "\(error.localizedDescription)",
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
-extension SignInViewController: ASWebAuthenticationPresentationContextProviding {
-    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+extension SignInViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
     }
 }
