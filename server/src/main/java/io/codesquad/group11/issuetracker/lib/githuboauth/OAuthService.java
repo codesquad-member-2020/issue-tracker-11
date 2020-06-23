@@ -56,6 +56,7 @@ public class OAuthService {
                              .id(jsonNode.required("id").asLong())
                              .login(jsonNode.required("login").asText())
                              .email(jsonNode.required("email").asText())
+                             .avatarUrl(jsonNode.required("avatar_url").asText())
                              .build();
     }
 
