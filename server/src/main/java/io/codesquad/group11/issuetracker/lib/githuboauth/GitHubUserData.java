@@ -10,5 +10,6 @@ public class GitHubUserData {
     private long id;
     private String login;
     private String email;
+    private String avatarUrl;
 
 }

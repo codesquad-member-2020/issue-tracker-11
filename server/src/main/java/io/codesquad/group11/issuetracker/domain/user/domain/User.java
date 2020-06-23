@@ -20,11 +20,13 @@ public class User {
     private Long githubId;
     private String githubLogin;
     private String githubEmail;
+    private String avatarUrl;
 
     public User(GitHubUserData githubUserData) {
         githubId = githubUserData.getId();
         githubLogin = githubUserData.getLogin();
         githubEmail = githubUserData.getEmail();
+        avatarUrl = githubUserData.getAvatarUrl();
     }
 
 }
