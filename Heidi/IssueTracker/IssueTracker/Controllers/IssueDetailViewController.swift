@@ -17,15 +17,22 @@ class IssueDetailViewController: UIViewController, Instantiable {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.moveSelf(to: .folded)
+        UIView.animate(withDuration: 0.5) {
+            self.moveSelf(to: .folded)
         }
     }
     
-    @IBAction func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: view)
-        moveSelf(to: Position.free(yPosition: view.frame.minY + translation.y))
-        sender.setTranslation(.zero, in: view)
+    @IBAction func panGestureRecognized(_ recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: view)
+        let positionToMove = view.frame.minY + translation.y
+        moveSelf(to: .free(yPosition: positionToMove))
+        recognizer.setTranslation(.zero, in: view)
+        
+        if recognizer.state == .ended {
+            UIView.animate(withDuration: 0.2) {
+                self.moveSelf(to: .nearerPosition(current: positionToMove))
+            }
+        }
     }
     
     private func moveSelf(to position: Position) {
@@ -36,14 +43,21 @@ class IssueDetailViewController: UIViewController, Instantiable {
 extension IssueDetailViewController {
     
     enum Position {
-        case full, folded, free(yPosition: CGFloat)
+        case full, folded, nearerPosition(current: CGFloat), free(yPosition: CGFloat)
         
         var yPosition: CGFloat {
             switch self {
             case .full: return 100
             case .folded: return UIScreen.main.bounds.height - 150
+            case let .nearerPosition(current): return nearerPosition(from: current)
             case let .free(yPosition): return boundaryLimited(yPosition)
             }
+        }
+        
+        func nearerPosition(from current: CGFloat) -> CGFloat {
+            let distanceToFull = abs(current - Self.full.yPosition)
+            let distanceToFolded = abs(current - Self.folded.yPosition)
+            return distanceToFull < distanceToFolded ? Self.full.yPosition : Self.folded.yPosition
         }
         
         private func boundaryLimited(_ value: CGFloat) -> CGFloat {
