@@ -93,8 +93,8 @@
         <!--Issue Detail View Controller-->
         <scene sceneID="Lc3-AK-q8e">
             <objects>
-                <viewController id="RpC-Wp-eMa" customClass="IssueDetailViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YvE-iP-sqM">
+                <viewController storyboardIdentifier="IssueDetailViewController" id="RpC-Wp-eMa" customClass="IssueDetailViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YvE-iP-sqM" customClass="FloatingView" customModule="IssueTracker" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

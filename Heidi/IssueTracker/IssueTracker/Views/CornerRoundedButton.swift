@@ -8,8 +8,8 @@
 
 import UIKit
 
-@IBDesignable final class CornerRoundedButton: UIButton {
+@IBDesignable final class CornerRoundedButton: UIButton, CornerRadius {
     @IBInspectable var cornerRadius: CGFloat = 0 {
-        didSet { layer.cornerRadius = cornerRadius }
+        didSet { configure(cornerRadius: cornerRadius) }
     }
 }
