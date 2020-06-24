@@ -12,10 +12,10 @@ protocol Shadow where Self: UIView { }
 
 extension Shadow {
     func configureShadow(
-        color: UIColor = .darkGray,
+        color: UIColor = .black,
         offset: CGSize = CGSize(width: 0, height: 0),
         radius: CGFloat = 10,
-        opacity: Float = 0.4
+        opacity: Float = 0.2
     ) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
