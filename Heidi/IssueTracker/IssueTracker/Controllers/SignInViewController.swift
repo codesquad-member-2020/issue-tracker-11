@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController, Instantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,5 +28,3 @@ final class SignInViewController: UIViewController {
         delegate.changeRootViewController(to: viewController)
     }
 }
-
-extension SignInViewController: Instantiable { }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IssueDetailViewController: UIViewController {
+class IssueDetailViewController: UIViewController, Instantiable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
