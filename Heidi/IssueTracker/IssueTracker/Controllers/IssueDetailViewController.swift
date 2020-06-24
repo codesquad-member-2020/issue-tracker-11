@@ -13,9 +13,9 @@ class IssueDetailViewController: UIViewController, Instantiable {
     enum Position {
         case full, folded
         
-        var y: CGFloat {
+        var yPosition: CGFloat {
             switch self {
-            case .full: return UIScreen.main.bounds.height
+            case .full: return 100
             case .folded: return UIScreen.main.bounds.height - 150
             }
         }
@@ -29,8 +29,17 @@ class IssueDetailViewController: UIViewController, Instantiable {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.5) { [weak self] in
-            guard let frame = self?.view.frame else { return }
-            self?.view.frame = CGRect(x: 0, y: Position.folded.y, width: frame.width, height: frame.height)
+            self?.moveSelf(to: .folded)
         }
+    }
+    
+    private func moveSelf(to position: Position) {
+        view.frame = view.frame.yPositionMoved(to: position.yPosition)
+    }
+}
+
+private extension CGRect {
+    func yPositionMoved(to position: CGFloat) -> CGRect {
+        return CGRect(x: origin.x, y: position, width: width, height: height)
     }
 }
