@@ -27,6 +27,7 @@
 		C271E9772497B0320016EF3F /* Identifiable+Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9762497B0320016EF3F /* Identifiable+Instantiable.swift */; };
 		C271E9792497B1FE0016EF3F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E9782497B1FE0016EF3F /* DashboardViewController.swift */; };
 		C271E97B2497D9400016EF3F /* LoginStorageTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271E97A2497D9400016EF3F /* LoginStorageTaskTests.swift */; };
+		C2A4BF2124A30F520039F5F4 /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4BF2024A30F520039F5F4 /* IssueDetailViewController.swift */; };
 		C2DD4E4D248F9C3E0039BB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */; };
 		C2DD4E4F248F9C3E0039BB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */; };
 		C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */; };
@@ -68,6 +69,7 @@
 		C271E9762497B0320016EF3F /* Identifiable+Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Identifiable+Instantiable.swift"; sourceTree = "<group>"; };
 		C271E9782497B1FE0016EF3F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C271E97A2497D9400016EF3F /* LoginStorageTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageTaskTests.swift; sourceTree = "<group>"; };
+		C2A4BF2024A30F520039F5F4 /* IssueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
 		C2DD4E49248F9C3E0039BB74 /* IssueTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD4E4C248F9C3E0039BB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DD4E4E248F9C3E0039BB74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				C2DD4E50248F9C3E0039BB74 /* SignInViewController.swift */,
 				C271E9782497B1FE0016EF3F /* DashboardViewController.swift */,
+				C2A4BF2024A30F520039F5F4 /* IssueDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C2DD4E51248F9C3E0039BB74 /* SignInViewController.swift in Sources */,
 				C271E95B24924BC30016EF3F /* NetworkTask.swift in Sources */,
 				C271E94C2492234E0016EF3F /* Secret.swift in Sources */,
+				C2A4BF2124A30F520039F5F4 /* IssueDetailViewController.swift in Sources */,
 				C271E9752497AF3D0016EF3F /* StoryboardRouter.swift in Sources */,
 				C271E9702497A2720016EF3F /* StorageTask.swift in Sources */,
 				C271E945249217800016EF3F /* Request.swift in Sources */,
