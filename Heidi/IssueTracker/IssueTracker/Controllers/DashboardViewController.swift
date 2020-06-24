@@ -27,6 +27,6 @@ final class DashboardViewController: UIViewController, Instantiable {
         addChild(viewController)
         view.addSubview(viewController.view)
         viewController.didMove(toParent: self)
-        viewController.view.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.width)
+        viewController.view.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height)
     }
 }
