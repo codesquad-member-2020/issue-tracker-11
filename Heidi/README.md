@@ -35,9 +35,23 @@
 * 회원 가입 성공 후 화면 전환 추가
 * LoginStorageTask 테스트
 
+### Bottom sheet 구현
+
+> [PR #26 [Heidi] Bottom Sheet 구현][pr26]
+
+* Child 뷰 컨트롤러 추가 및 외형 설정
+* Pan 제스쳐를 따라서 뷰 animate
+* Pan 제스쳐가 끝나면 접힌 상태/펴진 상태 중 더 가까운 위치로 이동
+
+**실행 결과**
+
+![bottom-sheet](ScreenShots/bottom-sheet.gif)
+
 
 [pr12]: https://github.com/codesquad-member-2020/issue-tracker-11/pull/12
 [pr23]: https://github.com/codesquad-member-2020/issue-tracker-11/pull/23
+[pr26]: https://github.com/codesquad-member-2020/issue-tracker-11/pull/26
+
 
 
 
