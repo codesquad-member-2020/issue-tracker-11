@@ -8,10 +8,25 @@
 
 import UIKit
 
-final class DashboardViewController: UIViewController {
+final class DashboardViewController: UIViewController, Instantiable {
+    
+    private let bottomSheetViewController = IssueDetailViewController.instantiate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        configureBottomSheet()
+    }
+    
+    private func configureBottomSheet() {
+        guard let viewController = bottomSheetViewController else { return }
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        viewController.didMove(toParent: self)
+        viewController.view.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height)
+    }
 }
-
-extension DashboardViewController: Instantiable { }

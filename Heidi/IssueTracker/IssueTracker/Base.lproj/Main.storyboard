@@ -90,9 +90,35 @@
             </objects>
             <point key="canvasLocation" x="883" y="139"/>
         </scene>
+        <!--Issue Detail View Controller-->
+        <scene sceneID="Lc3-AK-q8e">
+            <objects>
+                <viewController storyboardIdentifier="IssueDetailViewController" id="RpC-Wp-eMa" customClass="IssueDetailViewController" customModule="IssueTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YvE-iP-sqM" customClass="FloatingView" customModule="IssueTracker" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="detailBackground"/>
+                        <viewLayoutGuide key="safeArea" id="ACe-nU-Buc"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9d5-1g-fhD" appends="YES" id="MeJ-qk-z6C"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXb-MM-fQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9d5-1g-fhD">
+                    <connections>
+                        <action selector="panGestureRecognized:" destination="RpC-Wp-eMa" id="BiN-wX-UNQ"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="883" y="827"/>
+        </scene>
     </scenes>
     <resources>
         <image name="githubLogo" width="60" height="60"/>
+        <namedColor name="detailBackground">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="reversedLabel">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
